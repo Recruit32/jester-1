@@ -1,3 +1,1 @@
 # jumbo-jester
-
-hello, hello
