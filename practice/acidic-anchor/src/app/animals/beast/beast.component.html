@@ -1,0 +1,11 @@
+<div class="media">
+  <img class="mr-3" 
+       [src]="beast.imageUrl" 
+       [alt]="beast.type">
+  <div class="media-body">
+    <h5 class="mt-0">{{ beast.type }}</h5>
+    {{ beast.description }}
+    <h6 #heading>{{ name }}</h6>
+    <ng-content></ng-content>
+  </div>
+</div>

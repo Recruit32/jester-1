@@ -1,5 +1,38 @@
-<div class="border border-primary">
-  HI
-</div>
+<section class="border border-primary">
+  <div class="container">
+    <app-zoo  (strongBeastCreated)="onStrongBeastAdded($event)"
+              (weakBeastCreated)="onWeakBeastAdded($event)">
+    </app-zoo>
+    <hr />
+    <button class="btn btn-sm border mr-2" 
+            (click)="onChangeFirst()">
+      Change first element
+    </button>
+    <button class="btn btn-sm border mr-2" 
+            (click)="onDestroyFirst()">
+      Destroy first element
+    </button>
+    <div class="row">
+      <div class="col col-md-6">
+        <app-beast *ngFor="let beast of myBeasts"
+                   [myBeast]="beast"
+                   [name]="beast.type">
+          <p><code>ng-content</code></p>
+          <p #contentParagraph>
+            <strong *ngIf="beast.strength >= 20" 
+                    style="color: darkmagenta">
+              {{ beast.strength }}
+            </strong>
+            <em *ngIf="beast.strength < 20"
+                style="color:goldenrod">
+              {{ beast.strength }}
+            </em>
+          </p>
+        </app-beast>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 <router-outlet></router-outlet>

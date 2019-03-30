@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col col-md-6">
+    <p>Add new beast</p>
+    <label>Beast type</label>
+    <!-- <input type="text" class="form-control" [(ngModel)]="newBeastType"> -->
+    <input type="text" class="form-control" #beastTypeInput />
+    <label>Beast description</label>
+    <!-- <input type="text" class="form-control" [(ngModel)]="newBeastDesc"> -->
+    <input type="text" class="form-control" #beastDescInput />
+    <button class="btn btn-sm btn-primary"
+            (click)="onAddStrongBeast(beastTypeInput)">
+      Add strong beast
+    </button>
+    <button class="btn btn-sm btn-primary"
+            (click)="onAddWeakBeast(beastTypeInput)">
+      Add weak beast
+    </button>
+  </div>
+</div>
