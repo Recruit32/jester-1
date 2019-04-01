@@ -1,1 +1,38 @@
-<h3>Basics binding</h3>
+<h3>Binding</h3>
+<section>
+  <h4>String Interpolation</h4>
+  <ul>
+    <li>
+      <code ngNonBindable>{{ allowNewServer }}</code>
+    </li>
+    <li>
+      use if you want to output something in your template or print some text
+    </li>
+  </ul>
+</section>
+<section>
+  <h4>Property Binding</h4>
+  <ul>
+    <li>
+      <code>&lt;p [innerText]="allowNewServer"&gt;&lt;/p&gt;</code>
+    </li>
+    <li>
+      use if you want to change some property of an HTML element, directive, or component
+    </li>
+  </ul>
+</section>
+<section>
+  <h4>Event Binding</h4>
+  <ul>
+    <li>
+      <code>(event)="myFunction($event)"</code>
+    </li>
+    <li>
+      <label class="mr-2">petName:</label>
+      <input class="mr-2"
+              type="text" 
+              (input)="onUpdatePetName($event)">
+      {{ petName }}
+    </li>
+  </ul>
+</section>
