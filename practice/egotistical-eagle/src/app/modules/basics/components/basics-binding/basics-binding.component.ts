@@ -6,13 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basics-binding.component.scss']
 })
 export class BasicsBindingComponent implements OnInit {
+  myPets: string[] = ['Lucky', 'Claw', 'Yoshi'];
   petName: string = 'Roar';
+  petName2: string = 'Giant';
+  allowNewPet: boolean = false;
+  petCreated: boolean = false;
 
   ngOnInit() {
-
+    setTimeout(() => {
+      this.allowNewPet = true;
+    }, 2000);
   }
 
   onUpdatePetName(event: Event) {
     this.petName = (<HTMLInputElement>event.target).value;
+  }
+
+  onCreatePet() {
+    this.petCreated = true;
+    this.myPets.push(this.petName2);
   }
 }

@@ -3,7 +3,7 @@
   <h4>String Interpolation</h4>
   <ul>
     <li>
-      <code ngNonBindable>{{ allowNewServer }}</code>
+      <code ngNonBindable>{{ allowNewPet }}</code> &nbsp; {{ allowNewPet }}
     </li>
     <li>
       use if you want to output something in your template or print some text
@@ -14,7 +14,7 @@
   <h4>Property Binding</h4>
   <ul>
     <li>
-      <code>&lt;p [innerText]="allowNewServer"&gt;&lt;/p&gt;</code>
+      <code>&lt;p [innerText]="allowNewPet"&gt;&lt;/p&gt;</code>
     </li>
     <li>
       use if you want to change some property of an HTML element, directive, or component
@@ -33,6 +33,76 @@
               type="text" 
               (input)="onUpdatePetName($event)">
       {{ petName }}
+    </li>
+  </ul>
+</section>
+<section>
+  <h4>Two Way Data Binding</h4>
+  <ul>
+    <li>
+      need to import <code>FormsModule</code> from <code>@angular/forms</code> to use <code>[(ngModel)]</code>
+    </li>
+    <li>
+      <label class="mr-2">petName2: </label>
+      <input class="mr-2"
+             type="text" 
+             [(ngModel)]="petName2" />
+      {{ petName2 }}
+    </li>
+    <li>
+      <button
+        class="btn btn-primary btn-sm"
+        [disabled]="!allowNewPet"
+        (click)="onCreatePet()">
+        Add Pet
+      </button>
+    </li>
+  </ul>
+</section>
+<section>
+  <h4><code>*ngIf="expression; else myLocalRefBlock"</code></h4>
+  <ul>
+    <li>
+      <code>&lt;ng-template #myLocalRefBlock&gt;</code>
+    </li>
+    <li>
+      the <code>#</code> defines a local reference (think of it as a marker)
+    </li>
+    <li>
+      can be used everywhere in template but cannot be used in Typescript code, unless <code>@ViewChild</code> decorator is used (but generally not recommended practice to directly access DOM elements)
+    </li>
+    <li [ngStyle]="{color: petCreated ? 'darkgreen' : 'red'}">
+      <p *ngIf="serverCreated; else noPet">
+        Pet {{ petName2 }} was created!!! | petCreated: {{ petCreated }}
+      </p>
+      <ng-template #noPet>
+        <p>No pet was created! | petCreated: {{ petCreated }}</p>
+      </ng-template>
+    </li>
+  </ul>
+</section>
+<section>
+  <h4><code>*ngFor="let pet of myPets"</code></h4>
+  <basics-pet *ngFor="let pet of myPets" [name]="pet"></basics-pet>
+  <h5 class="mt-2">Notes</h5>
+  <ul>
+    <li>
+      basics-binding.component.html (parent):
+      <code>&lt;basics-pet [name]="..."&gt;</code>
+    </li>
+    <li>
+      basics-pet.component.ts: 
+      <code>@Input() name string;</code>
+    </li>
+    <li>
+      <code ngNonBindable>[ngStyle]="&#123;backgroundColor: getColor()&#125;"</code>
+    </li>
+    <li>
+      <code ngNonBindable>[ngClass]="&#123;angry: mood === '😡'&#125;"</code>
+    </li>
+    <li>
+      *ngFor with index: 
+      <code>*ngFor="let el of elements; let i = index"</code>
     </li>
   </ul>
 </section>

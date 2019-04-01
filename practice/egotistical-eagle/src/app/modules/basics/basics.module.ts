@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BasicsBindingComponent } from './components';
+import { FormsModule } from '@angular/forms';
+import { BasicsBindingComponent, BasicsPetComponent } from './components';
 
 
 @NgModule({
   declarations: [
-    BasicsBindingComponent
+    BasicsBindingComponent,
+    BasicsPetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   exports: [
     BasicsBindingComponent
