@@ -1,0 +1,14 @@
+<div class="basics-container">
+  <h3>Misc</h3>
+  <section>
+    <h4><code>[ngSwitch]</code></h4>
+    <label class="mr-2">Cases: 5, 10, 100, default</label>
+    <input type="text" [(ngModel)]="value" />
+    <div [ngSwitch]="value">
+      <p *ngSwitchCase="5">Value is 5</p>
+      <p *ngSwitchCase="10">Value is 10</p>
+      <p *ngSwitchCase="100">Value is 100</p>
+      <p *ngSwitchDefault>Value is Default</p>
+    </div>
+  </section>
+</div>

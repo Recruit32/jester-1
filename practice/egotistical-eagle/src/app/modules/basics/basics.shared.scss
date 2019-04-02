@@ -1,0 +1,17 @@
+$font-stack: Helvetica, Arial, sans-serif;
+
+.basics-container {
+  font-family: $font-stack;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  h3 {
+    margin: 10px 15px;
+  }
+  section {
+    margin: 0;
+    padding: 10px 15px;
+    ul {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

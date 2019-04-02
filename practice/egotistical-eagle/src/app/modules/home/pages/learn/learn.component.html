@@ -1,13 +1,46 @@
-<h2>Learn component</h2>
-
-<ul class="bg-light">
-  <li>
-    Angular CLI:<br>
-    <code>ng new my-app</code><br>
-    <code>ng serve</code>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       [routerLinkActiveOptions]="{exact: true}"
+       routerLink="./">
+       Root
+    </a>
   </li>
-  <li>
-      <b>TypeScript:</b> superset of JS; more features (Types, Classes, Interfaces, ...); strong typing (TS) vs dynamic typing (JS); must be compiled to JavaScript
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       routerLink="info">
+       Info
+    </a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       routerLink="binding">
+      Binding
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       routerLink="directives">
+       Directives
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       routerLink="misc">
+       Misc
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" 
+       routerLinkActive="active" 
+       routerLink="routing">
+       Routing
+    </a>
+  </li>   
 </ul>
 <router-outlet></router-outlet>

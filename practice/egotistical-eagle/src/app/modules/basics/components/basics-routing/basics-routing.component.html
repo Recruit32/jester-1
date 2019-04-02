@@ -1,0 +1,36 @@
+<section>
+  <h3>Routing Info</h3>
+
+  <pre>&lt;a routerLinkActive="active"
+    [routerLinkActiveOptions]="&#123;exact:true&#125;"
+    routerLink="/learn"&gt;
+    Root
+&lt;/a&gt;</pre>
+  <p>
+    • use for <code>[routerLinkActiveOptions]="&#123;exact: true&#125;"</code> so that active class specified in <code>routerLinkActive</code> is only applied when url matches exactly 
+  </p>
+  <hr>
+  <p>
+    <b>absolute path:</b> 
+  </p>
+  <pre>&lt;a routerLinkActive="active"
+    routerLink="/learn/info"
+    Info
+&lt;/a&gt;</pre>
+  <hr>
+  <p>
+    <b>relative path:</b> binding, ./binding
+  </p>
+  <pre>&lt;a routerLinkActive="active"
+    routerLink="binding"
+    Info
+&lt;/a&gt;</pre>
+  <hr>
+  <p>
+    <b>alternate syntax for setting routerLink:</b>
+  </p>
+    <pre>&lt;a routerLinkActive="active"
+    [routerLink]=['info']
+    Info
+&lt;/a&gt;</pre>
+</section>

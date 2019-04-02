@@ -1,0 +1,71 @@
+<div class="basics-container">
+  <h3>Directives</h3>
+  <section>
+    <ul>
+      <li>
+        instructions in the DOM
+      </li>
+      <li>
+        <b>attribute directives:</b> look like normal HTML attribute, possibly with data binding or event binding; only affects element they are added to
+      </li>
+      <li>
+        <b>structural directives:</b> look like normal HTML attribute, but has a leading <code>*</code> (for desugaring): affects a whole area in DOM (elements added/removed)
+      </li>
+      <li>
+        CLI: <code>ng g d directive-name</code>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h4>Attribute directive example 1</h4>
+    <p appBasicHighlight>
+      styled with basic highlight directive!
+    </p>
+  </section>
+  <section>
+    <h4>Attribute directive example 2</h4>
+    <p appBetterHighlight>
+      styled with better highlight directive (default)
+    </p>
+    <p appBetterHighlight 
+       [defaultColor]="'pink'"
+       [highlightColor]="'red'">
+      better highlight directive; pass in custom properties
+    </p>
+    <p appBetterHighlight 
+       defaultColor="lightgreen" 
+       highlightColor="green">
+      better highlight directive; pass in custom properties (alternative
+      syntax for single strings: <code>property="stringValue"</code>)
+    </p>
+    <ul>
+      <li>
+        <code>@HostListener</code>: listen to host events
+      </li>
+      <li>
+        <code>@HostBinding</code>: bind to host properties
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h4>Comments</h4>
+    <ul>
+      <li>
+        Note: not a good practice to directly access elements using <code>ElementRef, nativeElement</code>!
+      </li>  
+      <li>
+        using <code>renderer (Renderer2)</code> means app is not limited to running in browser - there are some environments where you might not have access to the DOM
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h4>Structural directive example</h4>
+    <button class="btn btn-sm btn-danger mb-2" 
+            (click)="this.toggle = !this.toggle">
+      toggle: {{ this.toggle }}
+    </button>
+    <div *appUnless="this.toggle">
+      <em>condition is TRUE</em>
+    </div>
+  </section>
+</div>

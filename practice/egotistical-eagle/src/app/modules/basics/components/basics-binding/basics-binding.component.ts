@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'basics-binding',
   templateUrl: './basics-binding.component.html',
-  styleUrls: ['./basics-binding.component.scss']
+  styleUrls: ['../../basics.shared.scss', './basics-binding.component.scss']
 })
 export class BasicsBindingComponent implements OnInit {
   myPets: string[] = ['Lucky', 'Claw', 'Yoshi'];
@@ -12,7 +12,10 @@ export class BasicsBindingComponent implements OnInit {
   allowNewPet: boolean = false;
   petCreated: boolean = false;
 
-  ngOnInit() {
+  constructor() {
+  }
+
+  ngOnInit() { 
     setTimeout(() => {
       this.allowNewPet = true;
     }, 2000);

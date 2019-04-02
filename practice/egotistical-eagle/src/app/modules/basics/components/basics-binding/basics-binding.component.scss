@@ -1,22 +1,12 @@
-$font-stack: Helvetica, Arial, sans-serif;
 $subheading-color: navy;
 $background-color-1: #efe9f9;
 $background-color-2: #dadaf5;
 
-h3 {
-  margin: 10px 15px;
-}
-
 section {
-  font-family: $font-stack;
-  margin: 0;
-  padding: 10px 15px;
   h4 {
     color: $subheading-color;
-    margin-bottom: 0.5rem;
   }
   ul {
-    margin-bottom: 0.5rem;
     li {
       code {
         color: brown;
