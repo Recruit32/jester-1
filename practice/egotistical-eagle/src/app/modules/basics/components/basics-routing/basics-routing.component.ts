@@ -10,5 +10,6 @@ export class BasicsRoutingComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('BasicsRoutingComponent ngOnInit()'); 
   }
 }

@@ -12,5 +12,6 @@ export class BasicsMiscComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('BasicsMiscComponent ngOnInit()'); 
   }
 }

@@ -10,5 +10,6 @@ export class BasicsRootComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('BasicsRootComponent ngOnInit()'); 
   }
 }

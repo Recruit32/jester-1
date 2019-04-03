@@ -11,6 +11,7 @@ export class BasicsDirectivesComponent implements OnInit {
   constructor() {
   }
 
-  ngOnInit() { 
+  ngOnInit() {
+    console.log('BasicsDirectivesComponent ngOnInit()');  
   }
 }

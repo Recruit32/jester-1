@@ -16,8 +16,8 @@ import {
   BetterHighlightDirective,
   UnlessDirective
 } from './directives';
-import { BeastsService } from 'src/app/demo-services/beasts.service';
-import { LoggingService } from 'src/app/demo-services/logging.service';
+// import { BeastsService } from 'src/app/demo-services/beasts.service';
+// import { LoggingService } from 'src/app/demo-services/logging.service';
 import { ZooModule } from '../zoo/zoo.module';
 
 @NgModule({
@@ -39,6 +39,6 @@ import { ZooModule } from '../zoo/zoo.module';
     FormsModule,
     ZooModule
   ],
-  providers: [BeastsService, LoggingService]
+  providers: []
 })
 export class BasicsModule { }

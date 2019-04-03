@@ -15,7 +15,8 @@ export class BasicsBindingComponent implements OnInit {
   constructor() {
   }
 
-  ngOnInit() { 
+  ngOnInit() {
+    console.log('BasicsBindingComponent ngOnInit()'); 
     setTimeout(() => {
       this.allowNewPet = true;
     }, 2000);

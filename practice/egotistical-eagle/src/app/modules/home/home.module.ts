@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from '../home/pages/home/home.component';
 import { LearnComponent } from '../home/pages/learn/learn.component';
 import { BasicsModule } from '../basics/basics.module';
+import { BamazonModule } from '../bamazon/bamazon.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BasicsModule } from '../basics/basics.module';
   imports: [
     BrowserModule,
     HomeRoutingModule,
-    BasicsModule
+    BasicsModule,
+    BamazonModule
   ],
   providers: [],
   bootstrap: [HomeComponent]

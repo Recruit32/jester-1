@@ -10,5 +10,6 @@ export class BasicsInfoComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('BasicsInfoComponent ngOnInit()'); 
   }
 }
