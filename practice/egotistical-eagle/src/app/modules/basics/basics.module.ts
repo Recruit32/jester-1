@@ -8,13 +8,17 @@ import {
   BasicsPetComponent,
   BasicsDirectivesComponent,
   BasicsMiscComponent,
-  BasicsRoutingComponent
+  BasicsRoutingComponent,
+  BasicsServicesComponent
 } from './components';
 import {
   BasicHighlightDirective,
   BetterHighlightDirective,
   UnlessDirective
 } from './directives';
+import { BeastsService } from 'src/app/demo-services/beasts.service';
+import { LoggingService } from 'src/app/demo-services/logging.service';
+import { ZooModule } from '../zoo/zoo.module';
 
 @NgModule({
   declarations: [
@@ -25,17 +29,16 @@ import {
     BasicsDirectivesComponent,
     BasicsMiscComponent,
     BasicsRoutingComponent,
+    BasicsServicesComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ZooModule
   ],
-  exports: [
-    // ?
-  ],
-  providers: []
+  providers: [BeastsService, LoggingService]
 })
 export class BasicsModule { }

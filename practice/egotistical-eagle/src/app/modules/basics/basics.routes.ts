@@ -4,7 +4,8 @@ import {
   BasicsBindingComponent,
   BasicsDirectivesComponent,
   BasicsMiscComponent,
-  BasicsRoutingComponent
+  BasicsRoutingComponent,
+  BasicsServicesComponent
 } from './components';
 
 export const BASICS_ROUTES = [
@@ -13,5 +14,6 @@ export const BASICS_ROUTES = [
   { path: 'binding', component: BasicsBindingComponent },
   { path: 'directives', component: BasicsDirectivesComponent },
   { path: 'misc', component: BasicsMiscComponent },
-  { path: 'routing', component: BasicsRoutingComponent }
+  { path: 'routing', component: BasicsRoutingComponent },
+  { path: 'services', component: BasicsServicesComponent }
 ];

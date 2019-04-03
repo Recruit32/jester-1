@@ -1,0 +1,16 @@
+<div class="border border-dark p-2 rounded">
+  <h5>{{ beast.name }} the {{ beast.type }}</h5>
+  <p>Feeling... {{ beast.mood }}</p>
+  <button class="btn btn-sm btn-light border border-info p-1 mr-2"
+          (click)="onSetMoodTo('happy')">
+    Set to 'happy'
+  </button>
+  <button class="btn btn-sm btn-light border border-info p-1 mr-2"
+          (click)="onSetMoodTo('sad')">
+    Set to 'sad'
+  </button>
+  <button class="btn btn-sm btn-light border border-info p-1 mr-2"
+          (click)="onSetMoodTo('angry')">
+    Set to 'angry'
+  </button>
+</div>

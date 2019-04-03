@@ -1,0 +1,10 @@
+<div class="basics-container">
+  <h3>BasicsServicesComponent</h3>
+  <section>
+    <zoo-new-beast></zoo-new-beast>
+    <zoo-beast *ngFor="let beast of beasts; let i = index"
+               [beast]="beast"
+               [id]="i">
+    </zoo-beast>
+  </section>
+</div>
