@@ -1,0 +1,21 @@
+<div class="p-3 server-container">
+  <h4>Server #{{ server.id }}</h4>
+  <div class="d-flex align-items-center mb-3">
+    <div class="server-name mr-auto">
+      {{ server.name }}
+    </div>
+    <div class="ml-auto">
+      <span [ngClass]="getBadgeClass()">
+        {{ server.status }}
+      </span>
+    </div>
+  </div>
+  <a class="btn btn-primary"
+     href="#"
+     role="button"
+     [routerLink]="['edit']"
+     *ngIf="!isEditUrl()">
+    Edit Server
+  </a>
+  <router-outlet></router-outlet>
+</div>

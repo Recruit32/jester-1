@@ -1,0 +1,15 @@
+<div class="p-3 servers-container">
+  <h4>Servers ({{ servers.length }})</h4>
+  <div class="list-group">
+    <!-- 
+      [queryParams]="{ allowEdit: '1' }"
+      fragment="loading"
+    -->
+    <a [routerLink]="[server.id]"
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers">
+      {{ server.name }}
+    </a>
+  </div>
+</div>

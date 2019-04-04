@@ -1,0 +1,23 @@
+<div class="border p-3">
+  <ul class="nav nav-tabs">
+    <li class="nav-item"
+        *ngFor="let link of navLinks">
+      <a class="nav-link" 
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: link.exact }"
+         routerLink="{{ link.value }}">
+        {{ link.display }}
+      </a>
+    </li>
+  </ul>
+  <div class="p-3 server-manager-container" 
+       *ngIf="isServerManagerUrl()">
+    <h3>Welcome to Server Manager 4.0</h3>
+    <p>Manage your servers and users.</p>
+    <button class="btn btn-primary"
+            (click)="onLoadServer(1)">
+      Load Server 1
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+</div>

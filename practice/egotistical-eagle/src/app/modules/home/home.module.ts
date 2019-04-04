@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/pages/home/home.component';
 import { LearnComponent } from '../home/pages/learn/learn.component';
 import { BasicsModule } from '../basics/basics.module';
 import { BamazonModule } from '../bamazon/bamazon.module';
+import { PracticeModule } from '../practice/practice.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BamazonModule } from '../bamazon/bamazon.module';
     BrowserModule,
     HomeRoutingModule,
     BasicsModule,
+    PracticeModule,
     BamazonModule
   ],
   providers: [],

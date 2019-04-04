@@ -1,0 +1,11 @@
+<div class="p-3" style="border: 1px solid cornflowerblue;">
+  <h4>Users ({{ users.length }})</h4>
+  <div class="list-group">
+    <a class="list-group-item"
+        href="#"
+        [routerLink]="[user.id, user.name]"
+        *ngFor="let user of users">
+      {{ user.name }}
+    </a>
+  </div>
+</div>
