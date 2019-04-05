@@ -6,3 +6,4 @@ export * from './basics-directives/basics-directives.component';
 export * from './basics-misc/basics-misc.component';
 export * from './basics-routing/basics-routing.component';
 export * from './basics-services/basics-services.component';
+export * from './basics-typescript/basics-typescript.component';

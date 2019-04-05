@@ -2,8 +2,19 @@
   <h4>User</h4>
   <p>ID: {{ user.id }}</p>
   <p>Name: {{ user.name }}</p>
-  <hr>
-  <a [routerLink]="['/learn/practice/server-manager/users', 10, 'Anna']">
+  <hr />
+  <a class="btn btn-dark btn-sm mb-2"
+     [routerLink]="['/learn/practice/server-manager/users', 10, 'Anna']">
     Load Anna (10)
   </a>
+  <br />
+  <a class="btn btn-dark btn-sm mb-2"
+     [routerLink]="['/learn/practice/server-manager/users', 7, 'Kevin']"
+     [queryParams]="{ admin: '1' }"
+     fragment="loading">
+    Load Kevin (7), with queryParams and fragment
+  </a>
+  <hr />
+  <p>queryParam(admin): <em>{{ a }}</em></p>
+  <p>fragment: <em>{{ b }}</em></p>
 </div>

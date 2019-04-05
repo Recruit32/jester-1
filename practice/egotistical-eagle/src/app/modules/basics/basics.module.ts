@@ -9,7 +9,8 @@ import {
   BasicsDirectivesComponent,
   BasicsMiscComponent,
   BasicsRoutingComponent,
-  BasicsServicesComponent
+  BasicsServicesComponent,
+  BasicsTypescriptComponent
 } from './components';
 import {
   BasicHighlightDirective,
@@ -30,6 +31,7 @@ import { ZooModule } from '../zoo/zoo.module';
     BasicsMiscComponent,
     BasicsRoutingComponent,
     BasicsServicesComponent,
+    BasicsTypescriptComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective

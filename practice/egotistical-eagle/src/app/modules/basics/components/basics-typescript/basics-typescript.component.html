@@ -1,0 +1,114 @@
+<div class="basics-container">
+  <h3>TypeScript</h3>
+  <section>
+    <p>
+      <b>TypeScript:</b> superset of JS; more features (Types, Classes, Interfaces, ...); strong typing (TS) vs dynamic typing (JS); must be compiled to JavaScript
+    </p>
+<pre>
+<span class="ts-heading">//--- docs</span>
+// http://www.typescriptlang.org/Handbook
+
+<span class="ts-heading">//--- strong typing</span>
+let myString: string;
+myString = 'This is a string';
+myString = 4; // => error!
+
+<span class="ts-heading">//--- TypeScript can also infer types</span>
+let anotherString = 'This is a string without :string';
+anotherString = 4; // => error!
+
+// can only infer values when values assigned at declaration
+let yetAnotherString;
+yetAnotherString = 'This is a string'; // TypeScript does not know type
+yetAnotherString = 5' // => no error
+
+<span class="ts-heading">//--- other basic types</span>
+let aString: string;
+let aNumber: number;
+let aBoolean: boolean;
+let anArray: Array&lt;string&gt; // generic type => may only hold strings in this case
+let anything: any; // use this rarely!
+// we also got void (=> nothing) and enums (a set of numeric values)
+
+
+<span class="ts-heading">//--- classes</span>
+// classes allow us to create 'blueprints' for objects
+// in Angular, we use classes to create components, directives, pipes, ...
+
+class Car &#123;
+  engineName: string;
+  gears: number;
+  private speed: number;
+
+  constructor(speed: number) &#123;
+    this.speed = speed || 0;
+  &#125;
+
+  accelerate(): void &#123;
+    this.speed++;
+  &#125;
+
+  throttle(): void &#123;
+    this.speed--;
+  &#125;
+
+  getSpeed(): void &#123;
+    console.log(this.speed);
+  &#125;
+
+  static numberOfWheels(): number &#123;
+    return 4;
+  &#125;
+&#125; 
+
+// instantiate (create) an object from a class
+let car = new Car(5);
+car.accelerate();
+car.getSpeed();
+
+// calling static method
+console.log(Car.numberOfWheels()); 
+
+
+<span class="ts-heading">//--- interfaces</span>
+// interfaces allow us to create contracts other classes/objects have to implement
+// can use them to define custom types without creating classes
+// are NOT compiled to JS - it's just for checking/validation done by TS compiler
+
+interface User &#123;
+  username: string;
+  password: string;
+  confirmPassword?: string; // ? => optional property
+&#125;
+
+let user: User;
+user = &#123; anything: 'anything', anynumber: 5 &#125; // => error!
+user = &#123; username: 'max', password: 'secret' &#125;
+
+// interfaces can also contain functions w/o body, as it is only a blueprint/requirement
+
+interface CanDrive &#123;
+  accelerate(speed: number): void;
+&#125;
+
+let car: CanDrive = &#123;
+  accelerate: function(speed: number) &#123;
+    // ...
+  &#125;
+&#125;
+
+
+<span class="ts-heading">//--- generics</span>
+// generics are types which can hold/use several types
+
+let numberArray: Array&lt;string&gt; // this array will only accept numbers
+numberArray = ['test']; // => error!
+numberArray = [1, 2, 3];
+
+
+<span class="ts-heading">//--- modules</span>
+// import, export
+
+</pre>
+  </section>
+</div>
