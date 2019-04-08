@@ -7,6 +7,7 @@ import { LearnComponent } from '../home/pages/learn/learn.component';
 import { BasicsModule } from '../basics/basics.module';
 import { BamazonModule } from '../bamazon/bamazon.module';
 import { PracticeModule } from '../practice/practice.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PracticeModule } from '../practice/practice.module';
     HomeRoutingModule,
     BasicsModule,
     PracticeModule,
-    BamazonModule
+    BamazonModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [HomeComponent]

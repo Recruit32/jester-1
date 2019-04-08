@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'server-manager',
@@ -27,7 +28,8 @@ export class ServerManagerComponent implements OnInit {
 
   constructor(
     private router: Router, 
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthService
   ) { }
   
   ngOnInit() { }
@@ -47,5 +49,13 @@ export class ServerManagerComponent implements OnInit {
 
   isServerManagerUrl(): boolean {
     return this.router.url === '/learn/practice/server-manager';
+  }
+
+  onLogin() {
+    this.authService.login();
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }

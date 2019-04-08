@@ -10,12 +10,18 @@
       </span>
     </div>
   </div>
+  <!--
   <a class="btn btn-primary"
-     href="#"
      role="button"
      [routerLink]="['edit']"
      *ngIf="!isEditUrl()">
     Edit Server
   </a>
+  -->
+  <button class="btn btn-primary"
+          (click)="onEdit()"
+          *ngIf="!isEditUrl()">
+    Edit Server
+  </button>
   <router-outlet></router-outlet>
 </div>

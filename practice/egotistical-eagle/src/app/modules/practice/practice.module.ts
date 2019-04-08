@@ -10,6 +10,9 @@ import { ServerComponent } from './server-manager/servers/server/server.componen
 import { EditServerComponent } from './server-manager/servers/server/edit-server/edit-server.component';
 import { UsersComponent } from './server-manager/users/users.component';
 import { UserComponent } from './server-manager/users/user/user.component';
+import { AuthService } from './server-manager/services/auth.service';
+import { AuthGuard } from './server-manager/services/auth-guard.service';
+import { CanDeactivateGuard } from './server-manager/services/can-deactivate-guard.service';
 
 
 @NgModule({
@@ -27,6 +30,6 @@ import { UserComponent } from './server-manager/users/user/user.component';
     RouterModule,
     FormsModule
   ],
-  providers: [ServersService]
+  providers: [ServersService, AuthService, AuthGuard, CanDeactivateGuard]
 })
 export class PracticeModule { }
