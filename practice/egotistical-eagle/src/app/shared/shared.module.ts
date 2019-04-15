@@ -1,10 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PageNotFoundComponent } from './components';
+import { 
+  PageNotFoundComponent,
+  ErrorPageComponent 
+} from './components';
 
 @NgModule({
   declarations: [
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     CommonModule

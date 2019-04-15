@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BASICS_ROUTES } from '../basics/basics.routes';
 import { LearnComponent } from './pages/learn/learn.component';
 import { PRACTICE_ROUTES } from '../practice/practice.routes';
-import { PageNotFoundComponent } from 'src/app/shared/components';
+import { PageNotFoundComponent, ErrorPageComponent } from 'src/app/shared/components';
 
 const routes: Routes = [
   { path: '', children: [] },
@@ -23,7 +23,8 @@ const routes: Routes = [
     ]
   },
   // redirecting and wildcard routes
-  { path: 'not-found', component: PageNotFoundComponent },
+  // { path: 'not-found', component: PageNotFoundComponent },
+  { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!'} },
   { path: '**', redirectTo: '/not-found' }
 ];
 
@@ -37,6 +38,7 @@ const routes: Routes = [
 */
 
 @NgModule({
+  // imports: [RouterModule.forRoot(routes, {useHash: true})],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
